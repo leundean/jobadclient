@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="mainPane" prefHeight="732.0" prefWidth="1327.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="annonsklient.FXMLDocumentController">
+    <children>
+        <Button fx:id="button" layoutX="587.0" layoutY="43.0" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="77.0" text="Sök" />
+      <TextField fx:id="searchBox" layoutX="250.0" layoutY="43.0" prefHeight="25.0" prefWidth="328.0" />
+      <TreeTableView fx:id="tlt" layoutX="250.0" layoutY="78.0" prefHeight="619.0" prefWidth="415.0">
+        <columns>
+          <TreeTableColumn fx:id="tlt_left" prefWidth="225.0" />
+          <TreeTableColumn fx:id="tlt_right" prefWidth="175.0" />
+        </columns>
+      </TreeTableView>
+      <TabPane layoutX="675.0" layoutY="44.0" prefHeight="645.0" prefWidth="643.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Annonstext">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane hbarPolicy="NEVER" prefHeight="613.0" prefWidth="643.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1200.0" prefWidth="641.0">
+                                 <children>
+                                    <Label fx:id="annonsRubrik" alignment="BOTTOM_LEFT" layoutX="54.0" layoutY="15.0" prefHeight="76.0" prefWidth="551.0" wrapText="true">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="annonsText" alignment="TOP_LEFT" layoutX="53.0" layoutY="108.0" prefHeight="1092.0" prefWidth="544.0" wrapText="true" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Webb annons">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <WebView fx:id="webAdv" layoutX="-5.0" layoutY="1.0" prefHeight="612.0" prefWidth="650.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <ChoiceBox fx:id="lanListBox" layoutX="28.0" layoutY="43.0" prefHeight="25.0" prefWidth="195.0" />
+      <WebView fx:id="mapView" layoutX="3.0" layoutY="46.0" prefHeight="594.0" prefWidth="244.0" scaleX="0.8" scaleY="0.8" />
+    </children>
+</AnchorPane>
